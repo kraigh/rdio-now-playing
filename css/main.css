@@ -1,0 +1,10 @@
+
+input#user-lookup {
+  display: inline-block;
+  width: 50%;
+  margin: 20px auto;
+}
+
+a.user-lookup-submit {
+
+}
