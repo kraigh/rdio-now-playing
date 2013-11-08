@@ -7,10 +7,16 @@ $consumer_secret = '7ZPxkvfSNm';
 
 $rdio = new Rdio(array($consumer_key, $consumer_secret));
 
-if(isset($_POST['vars'])) {
-  $vars = json_decode($_POST['vars'], TRUE);
+if(isset($_POST['user'])) {
+  $user = $_POST['user'];
 
-  $data = $rdio->call('get', keys=$vars['user'], extras='lastSongPlayed');
+  $params = array(
+    'method' => 'get',
+    'keys' => $user,
+    'extras' => 'lastSongPlayed'
+  );
+
+  $data = $rdio->call('get', $params);
 
   return $data;
 }
