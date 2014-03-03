@@ -26,19 +26,35 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="container">
+        <div class="container user-lookup-container">
             <div class="jumbotron">
                 <h1>Rdio Now Playing</h1>
                 <p>Enter a Rdio user (by email or username) below to get a live feed of the songs they are currently listening to.</p>
-                <form class="user-lookup text-center">
+                <form class="user-lookup text-center" id="user-lookup-form">
                     <input type="text" id="user-lookup" class="form-control" placeholder="Email or Username" required autofocus>
-                    <a class="btn btn-primary user-lookup-submit" href="javascript:;"><span class="glyphicon glyphicon-search"></span></a>
+                    <button form="user-lookup-form" class="btn btn-primary user-lookup-submit" href="javascript:;"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
+                <div class="alert alert-danger alert-oops"></div>
             </div>
 
         </div> <!-- /container -->
 
-
+        <div class="container song-info-container">
+            <div class="user-info-wrapper">User: <span class="userInfo"></span> <a href="javascript:;" id="permalink">(permalink)</a> <a href="javascript:;" id="changeUser">(change)</a> -- Checking again in <span class="nextCheck"></span> seconds.</div>
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="albumArt"></div>
+                    </div>
+                    <div class="col-md-7">
+                        <h1 class="trackName"></h1>
+                        <h2 class="artistName"></h2>
+                        <h2 class="albumName"></h2>
+                        <div class="alert alert-info alert-paused">Note: The user seems to have paused playback. Will check for updates every 30 seconds.</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
 
 
 

@@ -8,3 +8,20 @@ input#user-lookup {
 a.user-lookup-submit {
 
 }
+
+.song-info-container {
+  display: none;
+}
+
+.user-info-wrapper {
+  position: absolute;
+  top: 10px;
+}
+
+.alert-paused {
+  display: none;
+}
+
+.alert-oops {
+  display: none;
+}
